@@ -1,0 +1,6 @@
+<ol class="breadcrumb">
+	<li ng-repeat="path in $ctrl.road" ng-class="{active: $last}">
+		<a ng-if="!$last" ng-href="#!/{{path.id}}">{{path.fullname}}</a>
+		<span ng-if="$last">{{path.fullname}}</span>
+	</li>
+</ol>

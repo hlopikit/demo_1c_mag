@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h3 class="modal-title">Отправка на E-mail</h3>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+        <label for="to_email">Получатель:</label>
+        <input class="form-control" id="to_email" ng-model="$ctrl.to" disabled>
+    </div>
+
+    <div class="form-group">
+        <label for="contacts">Контактные данные:<span style="color: red; font-size: 20px;">*</span></label>
+        <textarea class="form-control" rows="2" id="contacts" ng-model="$ctrl.contacts"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="subject_message">Тема:</label>
+        <input class="form-control" id="subject_message" ng-model="$ctrl.subject">
+    </div>
+    <div class="form-group">
+        <label for="body_message">Сообщение:</label>
+        <textarea class="form-control" rows="5" id="body_message" ng-model="$ctrl.message"></textarea>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.onSendClick()">Отправить</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.onCancelClick()">Отменить</button>
+</div>

@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h3 class="modal-title">Отправка на E-mail</h3>
+</div>
+<div class="modal-body">
+    <span ng-show="$ctrl.resultemail.success">Ваш заказ успешно отправлен!</span>
+    <span ng-show="!$ctrl.resultemail.success">При отправке заказа возникла ошибка.</span>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.onOkayClick()">Ок</button>
+</div>

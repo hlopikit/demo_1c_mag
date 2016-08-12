@@ -1,0 +1,40 @@
+<h3>Оформление заказа</h3>
+<div style="margin-bottom: 13px;">
+    <button type="button" ng-click="$ctrl.onSendMailClick()" class="btn btn-info">Отправить заказ на e-mail</button>
+    <button type="button" ng-click="$ctrl.onSaveOrderClick()" class="btn btn-success">Сохранить в файл</button>
+    <label class="btn btn-primary">
+        Загрузить из файла<input file-reader="$ctrl.onLoadOrderClick" type="file" style="display:none;" accept=".txt">
+    </label>
+    <button type="button" ng-click="$ctrl.onClearOrderClick()" class="btn btn-warning">Очистить</button>
+
+</div>
+<div ng-if="$ctrl.items.length" style="margin-bottom: 10px; font-weight: bold;">Итог: {{$ctrl.result.value | number:2}}
+    руб.
+</div>
+<div ng-if="$ctrl.items.length <= 0">Пока ничего нет</div>
+
+<newlist></newlist>
+<!--<table ng-if="$ctrl.items.length" class="table table-hover table-bordered items-table">
+	<thead>
+		<tr>
+			<th>Артикул</th>
+			<th>Наименование</th>
+			<th>Производитель</th>
+			<th>Цена</th>
+			<th>Валюта</th>
+			<th style="width: 100px;">Количество</th>
+			<th>Ед.</th>
+		</tr>
+	</thead>
+	<tbody class="hand">
+		<tr ng-repeat="item in $ctrl.items" ng-click="$ctrl.openGroup(item)">
+			<td>{{item.article}}</td>
+			<td>{{item.fullname}}</td>
+			<td>{{item.producer}}</td>
+			<td>{{item.price}}</td>
+			<td>{{item.currency}}</td>
+			<td ng-click="$ctrl.inputClick($event)"><input ng-model="item.amount" ng-change="$ctrl.amountChange(item)" class="form-control" type="number"></td>
+			<td>{{item.unit}}</td>
+		</tr>
+	</tbody>
+</table>-->

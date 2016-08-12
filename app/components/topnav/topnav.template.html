@@ -1,0 +1,18 @@
+<header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class = "navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#!/">Главная</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#!/shopcart">Мой заказ</a></li>
+			</ul>
+			<form class="navbar-form navbar-right">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Наименование.." ng-model="$ctrl.searchtext">
+				</div>
+				<button ng-click="$ctrl.OnClickSearch()" class="btn btn-default">Поиск</button>
+			</form>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Прайс лист</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/dateformat.js"></script>
+    <script src="js/FileSaver.js"></script>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/ui-bootstrap.js"></script>
+    <script src="js/ui-bootstrap-tpls.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+
+    <script src="app/database.js"></script>
+    <!--<script>DBVAR_FOR_1C</script>-->
+
+    <script src="app/service/data.service.js"></script>
+    <script src="app/service/cart.service.js"></script>
+
+    <script src="app/directives/filechange.directive.js"></script>
+    <script src="app/components/newlist/newlist.component.js"></script>
+
+    <script src="app/components/mainpage/mainpage.component.js"></script>
+    <script src="app/components/category/category.component.js"></script>
+    <script src="app/components/itemslist/items.component.js"></script>
+    <script src="app/components/breadcrumbs/breadcrumbs.component.js"></script>
+    <script src="app/components/contacts/contacts.component.js"></script>
+    <script src="app/components/topnav/topnav.component.js"></script>
+    <script src="app/components/shopcart/shopcart.component.js"></script>
+    <script src="app/components/search/search.component.js"></script>
+
+    <!--Сжатые шаблоны angular'a. Создаются gulp'om-->
+    <!--<script src="dist/templates.js"></script>-->
+</head>
+<body ng-app="priceList">
+<!--top navigation-->
+<topnav></topnav>
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 col-md-3 sidebar">
+            <category-list></category-list>
+        </div>
+        <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
+            <div ng-view></div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

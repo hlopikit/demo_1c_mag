@@ -1,0 +1,5 @@
+<a href="#!/{{ data.id }}">{{ data.fullname }}</a>
+<ul ng-if="data.children.length">
+    <li ng-if="data.group" ng-repeat="data in data.children"
+        ng-include="'app/components/category/nodes.template.html'"></li>
+</ul>

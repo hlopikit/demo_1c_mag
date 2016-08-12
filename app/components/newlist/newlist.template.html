@@ -1,0 +1,32 @@
+<table ng-if="$ctrl.parentCtrl.groups.length" class="table table-hover table-bordered">
+    <tbody class="hand">
+    <tr ng-repeat="item in $ctrl.parentCtrl.groups" ng-click="$ctrl.openGroup(item)">
+        <td>{{ item.fullname }}</td>
+    </tr>
+    </tbody>
+</table>
+<table ng-if="$ctrl.parentCtrl.items.length" class="table table-hover table-bordered items-table">
+    <thead>
+    <tr>
+        <th>Артикул</th>
+        <th>Наименование</th>
+        <th>Производитель</th>
+        <th>Цена</th>
+        <th>Валюта</th>
+        <th style="width: 100px;">Количество</th>
+        <th>Ед.</th>
+    </tr>
+    </thead>
+    <tbody class="hand">
+    <tr ng-repeat="item in $ctrl.parentCtrl.items" ng-click="$ctrl.openGroup(item)">
+        <td>{{ item.article }}</td>
+        <td>{{ item.fullname }}</td>
+        <td>{{ item.producer }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.currency }}</td>
+        <td ng-click="$ctrl.inputClick($event)"><input ng-model="item.amount" ng-change="$ctrl.amountChange(item)"
+                                                       class="form-control" type="number"/></td>
+        <td>{{ item.unit }}</td>
+    </tr>
+    </tbody>
+</table>

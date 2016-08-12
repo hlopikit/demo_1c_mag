@@ -1,0 +1,10 @@
+<ul ng-if="!$ctrl.tree" class="nav nav-sidebar">
+    <li ng-repeat="cat in $ctrl.categories">
+        <a href="#!/{{ cat.id }}">{{ cat.fullname }}</a>
+    </li>
+</ul>
+
+
+<ul ng-if="$ctrl.tree">
+    <li ng-repeat="data in $ctrl.categories" ng-include="'app/components/category/nodes.template.html'"></li>
+</ul>
